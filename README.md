@@ -1,6 +1,6 @@
 [![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://www.banuba.com/video-editor-sdk)
 
-# Banuba Video Editor SDK. Export Integration sample for iOS.
+# Video Editor SDK. Export Integration sample for iOS.
 Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 - [Requirements](#Requirements)
