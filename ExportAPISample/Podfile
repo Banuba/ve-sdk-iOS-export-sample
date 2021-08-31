@@ -1,0 +1,17 @@
+source 'https://github.com/Banuba/specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '11.0'
+use_frameworks! 
+
+target 'ExportAPISample' do
+  pod 'BanubaVideoEditorEffectsSDK', '0.5.independent.beta'
+  pod 'VideoEditor', '0.5.independent.beta'
+  pod 'BanubaUtilities', '0.5.independent.beta'
+  pod 'BanubaLicenseServicingSDK', '0.5.independent.beta'
+  pod 'BanubaSDKServicing', '0.5.independent.beta'
+  pod 'BNBLicenseUtils', '0.6.independent.beta'
+
+  pod 'BSImagePicker'
+  
+end
