@@ -1,15 +1,14 @@
 [![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://www.banuba.com/video-editor-sdk)
 
 # Video Editor SDK. Export Integration sample for iOS.
-Banuba [AI Video Editor SDK](https://www.banuba.com/video-editor-sdk) allows you to quickly integrate short video functionality into your mobile app. On this page, we will explain how to do so on iOS.
 
 - [Requirements](#Requirements)
 - [Supported media formats](#Supported-media-formats)
 - [Token](#Token)
 - [Getting Started](#Getting-Started)
     + [CocoaPods](#CocoaPods)
-    + [Configure export flow](#Configure-export-flow)
     + [Configure edit flow](#Configure-edit-flow)
+    + [Configure export flow](#Configure-export-flow)
     + [Configure watermark](#Configure-watermark)
     + [Configure overlay effects](#Configure-overlay-effect)
 
@@ -73,7 +72,7 @@ pod install
 
 ### Configure edit flow
 
-Before you export video you need to add your video asset with following entities:
+Before exporting video you need to add your video asset to existing VideoEditorService instance.
 
 ``` swift
     // Add video to the sequence
