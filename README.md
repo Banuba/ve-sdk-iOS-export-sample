@@ -48,6 +48,8 @@ Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-iOS-exp
 ## Getting Started
 ### CocoaPods
 
+In the sample project there is a division into folders, such as 'sample' and 'helpers': all the functionality inherent in the API integration is in the ['sample'](https://github.com/Banuba/ve-sdk-iOS-export-sample/tree/master/ExportAPISample/ExportAPISample/Sample) folder, auxiliary information to support the functionality of the sample is in the ['helpers'](https://github.com/Banuba/ve-sdk-iOS-export-sample/tree/master/ExportAPISample/ExportAPISample/Helpers) folder.
+
 The easiest way to integrate the Video Editor SDK in your mobile app is through [CocoaPods](https://cocoapods.org). If you haven’t used this dependency manager before, see the [Getting Started Guide](https://guides.cocoapods.org/using/getting-started.html).
 
 Important: Make sure that you have CocoaPods version >= 1.9.0 installed. Check your CocoaPods version using this command [pod --version]
