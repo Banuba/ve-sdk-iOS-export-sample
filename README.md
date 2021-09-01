@@ -107,17 +107,6 @@ To export video after the editing is complete use these methods:
     watermarkFilterModel: VideoEditorFilterModel?,
     completion: ((_ isSuccess: Bool, _ error: Error?)-> Void)?
   )
-  
-  /// Export clean video without applied effects with input info and watermark model.
-  /// - Parameters:
-  ///   - fileURL: destination file url.
-  ///   - mediaInfo: Describes exporting video editor params.
-  ///   - completion: completion creation - (isSuccess,  error)
-  public func exportCleanVideo(
-    to file: URL,
-    mediaInfo: ExportVideoInfo,
-    completion: ((_ isSuccess: Bool, _ error: Error?) -> Void)?
-  )
 ```  
 
 Before exporting you need to apply default rotate transform:
