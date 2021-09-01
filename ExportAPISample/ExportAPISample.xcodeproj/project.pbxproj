@@ -72,7 +72,12 @@
 		8A21F8E326DE3443002B7850 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8A8D8FAC26DF710500260712 /* FileManagerAssistant.swift */,
+				8A8D8FAE26DF711F00260712 /* ActivityViewControllerAssistant.swift */,
+				8A8D8FB026DF713C00260712 /* GalleryManager.swift */,
+				8A8D8FC426DF93C400260712 /* EffectImageTransformator.swift */,
 				8A21F8E426DE3443002B7850 /* VideoPicker.swift */,
+				8A8D8FAA26DF70EB00260712 /* VideoResolutionCreator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -98,7 +103,7 @@
 		8A372B1226DE31DA00F9B939 /* ExportAPISample */ = {
 			isa = PBXGroup;
 			children = (
-				8A8D8FA326DF707800260712 /* ViewControllerExtensions */,
+				8A8D8FA326DF707800260712 /* Sample */,
 				8A21F8E326DE3443002B7850 /* Helpers */,
 				8A372B1326DE31DA00F9B939 /* AppDelegate.swift */,
 				8A372B1726DE31DA00F9B939 /* ViewController.swift */,
@@ -111,19 +116,14 @@
 			path = ExportAPISample;
 			sourceTree = "<group>";
 		};
-		8A8D8FA326DF707800260712 /* ViewControllerExtensions */ = {
+		8A8D8FA326DF707800260712 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
 				8A8D8FA426DF709000260712 /* VideoEditorServiceInitialization.swift */,
 				8A8D8FA626DF70B000260712 /* ExportFunctionality .swift */,
 				8A8D8FA826DF70CE00260712 /* EffectsApplicator.swift */,
-				8A8D8FAA26DF70EB00260712 /* VideoResolutionCreator.swift */,
-				8A8D8FAC26DF710500260712 /* FileManagerAssistant.swift */,
-				8A8D8FAE26DF711F00260712 /* ActivityViewControllerAssistant.swift */,
-				8A8D8FB026DF713C00260712 /* GalleryManager.swift */,
-				8A8D8FC426DF93C400260712 /* EffectImageTransformator.swift */,
 			);
-			path = ViewControllerExtensions;
+			path = Sample;
 			sourceTree = "<group>";
 		};
 		FB48E09694DF87D8473E53C8 /* Frameworks */ = {
