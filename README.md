@@ -27,8 +27,6 @@ Unfortunately, It isn't optimized for iPads.
 |.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v|
 
 ## Export video quality params
-Video Editor SDK classifies every device by its performance capabilities and uses the most suitable quality params for the exported video.
-
 Nevertheless it is possible to customize it with `ExportVideoInfo`. Just put a required video quality into `ExportVideoInfo` constructor. To be able to use your own quality parametrs please follow this [line](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L95).
 
 See the **default bitrate (kbps)** for exported video (without audio) in the table below:
