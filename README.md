@@ -27,7 +27,7 @@ Unfortunately, It isn't optimized for iPads.
 |.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v|
 
 ## Export video quality params
-You could customize it with `ExportVideoInfo`. Just put a required video quality into `ExportVideoInfo` constructor. To be able to use your own quality parametrs please follow this [line](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L95).
+You could customize it with `ExportVideoInfo`. Just put a required video quality into `ExportVideoInfo` constructor. To be able to use your own quality parametrs please follow this [line](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L56).
 
 See the **default bitrate (kbps)** for exported video (without audio) in the table below:
 | 360p(360 x 640) | 480p(480 x 854) | 540p(540 x 960) | HD(720 x 1280) | FHD(1080 x 1920) |
@@ -43,7 +43,7 @@ There is nothing complicated about it - [contact us](https://www.banuba.com/vide
 ## Token 
 We offer а free 14-days trial for you could thoroughly test and assess Video Editor SDK functionality in your app. To get access to your trial, please, get in touch with us by [filling a form](https://www.banuba.com/video-editor-sdk) on our website. Our sales managers will send you the trial token.
 
-Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L50).
+Video Editor token should be put [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/VideoEditorServiceInitialization.swift#L28).
 
 ## Getting Started
 ### CocoaPods
@@ -88,7 +88,7 @@ Before exporting video you need to add your video asset to existing VideoEditorS
     // Set cuurent video asset to video editor service
     videoEditorService.setCurrentAsset(videoEditorAsset)
 ```
-See the sample edit video flow [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L67).
+See the sample edit video flow [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L25).
 
 ### Configure export flow
 
@@ -118,7 +118,7 @@ Before exporting you need to apply default rotate transform:
     transformApplicator.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: originalRotation)
 ```
 
-See the sample export video flow [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L101).
+See the sample export video flow [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L62).
 
 ### Configure watermark
 
@@ -126,7 +126,7 @@ You can add a branded image that would appear on videos that users export.
 
 To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity. 
 
-See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L104) for details.
+See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L65) for details.
 
 ### Configure effects
 
@@ -134,7 +134,7 @@ You can add an effect objects such as gif and text to exporting video.
 
 To be able to use following functionality you need to operate on EffectApplicator entity and VideoEditorEffectInfo params.
 
-Please, checkout [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L118)
+Please, checkout [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/EffectsApplicator.swift#L17)
 
 ``` swift
 /// EffectApplicator allows you to add GIF and text effects to your existing VideoEditorServiсe composition
