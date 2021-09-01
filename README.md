@@ -22,9 +22,9 @@ This is what you need to run the AI Video Editor SDK
 Unfortunately, It isn't optimized for iPads.
 
 ## Supported media formats
-| Audio      | Video      | Images      |
-| ---------- | ---------  | ----------- |
-|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v| .bmp, .gif, .heic, <br>.jpeg, .jpg, .png, .tiff 
+| Audio      | Video      |
+| ---------- | ---------  | 
+|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v|
 
 ## Export video quality params
 Video Editor SDK classifies every device by its performance capabilities and uses the most suitable quality params for the exported video.
