@@ -126,9 +126,9 @@ To do so, create and configure the WatermarkConfiguration structure, then add it
 
 See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/c155a5b49c7c27be7efb6e8991de8c59c7e7943d/ExportAPISample/ExportAPISample/ViewController.swift#L104) for details.
 
-### Configure overlay effects
+### Configure effects
 
-You can add an overlay effect objects such as gif and text to exporting video. 
+You can add an effect objects such as gif and text to exporting video. 
 
 To be able to use following functionality you need to operate on EffectApplicator entity and VideoEditorEffectInfo params.
 
