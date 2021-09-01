@@ -41,10 +41,13 @@ extension ViewController {
 
     // Expected non-zero video aspect ratio constructor. Apply transform effect after adding required asset.
     let transformApplicator = TransformEffectApplicator(editor: videoEditorService)
-    transformApplicator.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: .rotate90)
+    // Apply temporary original rotation.
+    let originalRotation: AssetRotation = .rotate90
+    transformApplicator.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: originalRotation)
         
-    // Apply effect after transforming and adding relevant video editor asset
-    applyOverlayEffect(type: .text)
+    // Apply gif effect after transforming and adding relevant video editor asset
+    applyEffect(withType: .gif)
+    applyEffect(withType: .text)
     
     // Get file url
     let fileURL = prepareVideoFileURL()
