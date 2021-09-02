@@ -10,7 +10,7 @@
     + [Configure edit flow](#Configure-edit-flow)
     + [Configure export flow](#Configure-export-flow)
     + [Configure watermark](#Configure-watermark)
-    + [Configure overlay effects](#Configure-overlay-effect)
+    + [Configure effects](#Configure-effects)
 
 ## Requirements
 This is what you need to run the AI Video Editor SDK
