@@ -5,12 +5,12 @@ platform :ios, '11.0'
 use_frameworks! 
 
 target 'ExportAPISample' do
-  pod 'BanubaVideoEditorEffectsSDK', '1.0.18.2'
-  pod 'VideoEditor', '1.0.18.2'
-  pod 'BanubaUtilities', '1.0.18.2'
-  pod 'BanubaLicenseServicingSDK', '1.0.18.2'
-  pod 'BanubaSDKServicing', '1.0.18.2'
-  pod 'BNBLicenseUtils', '1.0.18.1'
+  pod 'BanubaVideoEditorEffectsSDK', '1.19.0'
+  pod 'VideoEditor', '1.19.0'
+  pod 'BanubaUtilities', '1.19.0'
+  pod 'BanubaLicenseServicingSDK', '1.19.0'
+  pod 'BanubaSDKServicing', '1.19.0'
+  pod 'BNBLicenseUtils', '1.19.0'
 
   pod 'BSImagePicker'
   

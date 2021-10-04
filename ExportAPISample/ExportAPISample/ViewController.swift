@@ -9,11 +9,15 @@ import UIKit
 
 // Banuba Modules
 import VideoEditor
+import BanubaVideoEditorEffectsSDK
 
 class ViewController: UIViewController {
   
   // MARK: - Video editor service instance
   var videoEditorService: VideoEditorService?
+  
+  // MARK: - EffectApplicator instance
+  var effectApplicator: EffectApplicator?
 
   override func viewDidLoad() {
     super.viewDidLoad()

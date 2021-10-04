@@ -22,6 +22,7 @@
 		8A8D8FB126DF713C00260712 /* GalleryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8FB026DF713C00260712 /* GalleryManager.swift */; };
 		8A8D8FC326DF865F00260712 /* GifExample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8A8D8FC226DF865F00260712 /* GifExample.gif */; };
 		8A8D8FC526DF93C400260712 /* EffectImageTransformator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8D8FC426DF93C400260712 /* EffectImageTransformator.swift */; };
+		8AD6206A270B4768007DD555 /* luts in Resources */ = {isa = PBXBuildFile; fileRef = 8AD62069270B4768007DD555 /* luts */; };
 		B982662CB88624BAB978D5DD /* Pods_ExportAPISample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1DD9DE5CC4B75202766EC36 /* Pods_ExportAPISample.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		8A8D8FB026DF713C00260712 /* GalleryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryManager.swift; sourceTree = "<group>"; };
 		8A8D8FC226DF865F00260712 /* GifExample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GifExample.gif; sourceTree = "<group>"; };
 		8A8D8FC426DF93C400260712 /* EffectImageTransformator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectImageTransformator.swift; sourceTree = "<group>"; };
+		8AD62069270B4768007DD555 /* luts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = luts; sourceTree = "<group>"; };
 		B1C696CA085017A60A48DBA0 /* Pods-ExportAPISample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExportAPISample.debug.xcconfig"; path = "Target Support Files/Pods-ExportAPISample/Pods-ExportAPISample.debug.xcconfig"; sourceTree = "<group>"; };
 		F1DD9DE5CC4B75202766EC36 /* Pods_ExportAPISample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExportAPISample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7135C5E7D05E7A28B0A5C5E /* Pods-ExportAPISample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExportAPISample.release.xcconfig"; path = "Target Support Files/Pods-ExportAPISample/Pods-ExportAPISample.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		8A372B1226DE31DA00F9B939 /* ExportAPISample */ = {
 			isa = PBXGroup;
 			children = (
+				8AD62069270B4768007DD555 /* luts */,
 				8A8D8FA326DF707800260712 /* Sample */,
 				8A21F8E326DE3443002B7850 /* Helpers */,
 				8A372B1326DE31DA00F9B939 /* AppDelegate.swift */,
@@ -196,6 +199,7 @@
 				8A8D8FC326DF865F00260712 /* GifExample.gif in Resources */,
 				8A372B2026DE31DB00F9B939 /* LaunchScreen.storyboard in Resources */,
 				8A372B1D26DE31DB00F9B939 /* Assets.xcassets in Resources */,
+				8AD6206A270B4768007DD555 /* luts in Resources */,
 				8A372B1B26DE31DA00F9B939 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

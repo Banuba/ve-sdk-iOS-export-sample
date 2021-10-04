@@ -13,33 +13,65 @@ import BanubaVideoEditorEffectsSDK
 
 // MARK: - Gif and Text Helpers
 extension ViewController {
-  /// Apply text effect
-  func applyEffect(withType type: EffectApplicatorType) {
-    guard let videoEditorService = videoEditorService else {
+  func applyColorEffect() {
+    // Lut URL
+    guard let url = Bundle.main.url(forResource: "luts/bubblegum", withExtension: "png") else {
       return
     }
-    
+    // Effect Applicator
+    effectApplicator?.applyColorEffect(
+      name: "BubbleGum",
+      lutUrl: url,
+      startTime: .zero,
+      endTime: .indefinite,
+      removeSameType: false,
+      effectId: EffectIDs.colorEffectStartId + uniqueEffectId
+    )
+  }
+  
+  /// Apply visual effect
+  func applyVisualEffect(withType type: VisualEffectApplicatorType) {
+    // Effect Applicator
+    effectApplicator?.applyVisualEffectApplicatorType(
+      type,
+      startTime: .zero,
+      endTime: .indefinite,
+      removeSameType: false,
+      effectId: EffectIDs.visualEffectStartId + uniqueEffectId
+    )
+  }
+  
+  /// Apply speed effect
+  func applySpeedEffect(withType type: SpeedEffectType) {
+    // Effect Applicator
+    effectApplicator?.applySpeedEffectType(
+      type,
+      startTime: .zero,
+      endTime: .indefinite,
+      removeSameType: false,
+      effectId: EffectIDs.speedEffectStartId + uniqueEffectId
+    )
+  }
+  
+  /// Apply text  or gif effect
+  func applyOverlayEffect(withType type: OverlayEffectApplicatorType) {
     // Ouput image should be created from cgImage reference
     let image = type == .gif ? createGifImage() : createTextImage()
     guard let outputImage = image else {
       return
     }
-        
-    // Effect Applicator
-    let effectApplicator = EffectApplicator(editor: videoEditorService)
-    
     // Create required effect settings
     let info = createEffectInfo(withImage: outputImage, for: type)
     
     // Apply effect
-    effectApplicator.applyEffectType(.gif, effectInfo: info)
+    effectApplicator?.applyOverlayEffectType(type, effectInfo: info)
   }
 
   // MARK: - VideoEditorEffectInfo helper
   /// Create VideoEditorEffectInfo instance
-  private func createEffectInfo(
+  func createEffectInfo(
     withImage image: UIImage,
-    for type: EffectApplicatorType
+    for type: OverlayEffectApplicatorType
   ) -> VideoEditorEffectInfo {
     
     // Relevant screen points
@@ -76,5 +108,10 @@ extension ViewController {
       leftBottom: CGPoint(x: 0.15, y: 0.35),
       rightBottom: CGPoint(x: 0.8, y: 0.35)
     )
+  }
+  
+  /// Unique effect id
+  var uniqueEffectId: UInt {
+    UInt.random(in: 0...100)
   }
 }

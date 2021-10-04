@@ -18,15 +18,35 @@ extension ViewController {
   func initializeVideoEditorService() {
     
     // Initialize WatermarkApplicator with default video resolution
-    let watermarkApplicator = WatermarkApplicator(
-      videoSize: VideoResolution.hd1920x1080.size
-    )
+    let watermarkApplicator = WatermarkApplicator()
     
+    // Put your token here
+    let token = <#T##String#>
+        
     // Get VideoEditorService instance via VideoEditorServiceBuilder
     videoEditorService = VideoEditorServiceBuilder.getNewEditorServicing(
-      // Put your token here
-      token: <#T##String#>,
+      token: token,
       watermarkApplicator: watermarkApplicator
     )
+    
+    // Setups EffectApplicator service
+    setupEffectApplicator(token: token)
+  }
+  
+  /// Setups EffectApplicator service
+  func setupEffectApplicator(token: String) {
+    guard let videoEditorService = videoEditorService else {
+      return
+    }
+    // Setup effects configs holder
+    let effectsHolder = EditorEffectsConfigHolder(
+      token: token
+    )
+    // Effect Applicator
+    let effectApplicator = EffectApplicator(
+      editor: videoEditorService,
+      effectConfigHolder: effectsHolder
+    )
+    self.effectApplicator = effectApplicator
   }
 }
