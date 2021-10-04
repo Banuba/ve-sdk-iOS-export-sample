@@ -131,11 +131,11 @@ See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c2
 
 ### Configure effects
 
-You can add an effect objects such as gif and text to exporting video. 
+You can add an effect objects such as gif/text, viasual, speed, color to exporting video. 
 
-To be able to use following functionality you need to operate on EffectApplicator entity and VideoEditorEffectInfo params.
+To be able to use following functionality you need to operate on EffectApplicator entity.
 
-Please, checkout [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/EffectsApplicator.swift#L17)
+Please, checkout [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/2eb9738c23b397caaf46bd665bf436107c863f6f/ExportAPISample/ExportAPISample/Sample/EffectsApplicator.swift#L15)
 
 ``` swift
 /// EffectApplicator allows you to add GIF and text effects to your existing VideoEditorServiсe composition
