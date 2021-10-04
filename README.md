@@ -114,10 +114,9 @@ To export video after the editing is complete use these methods:
 Before exporting you need to apply default rotate transform:
 ``` swift
     // Expected non-zero video aspect ratio constructor. Apply transform effect after adding required asset.
-    let transformApplicator = TransformEffectApplicator(editor: videoEditorService)
     // Apply temporary original rotation.
     let originalRotation: AssetRotation = .rotate90
-    transformApplicator.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: originalRotation)
+    effectApplicator?.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: originalRotation)
 ```
 
 See the sample export video flow [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L62).
