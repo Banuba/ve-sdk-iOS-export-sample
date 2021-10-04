@@ -140,52 +140,63 @@ Please, checkout [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/bl
 ``` swift
 /// EffectApplicator allows you to add GIF and text effects to your existing VideoEditorServiсe composition
 public class EffectApplicator {
-  /// VideoEditorService instance
-  private let editor: VideoEditorServicing
-  
   /// EffectApplicator constructor
   /// - Parameters:
   ///   - editor: Instance of existing VideoEditorService
-  public init(
-    editor: VideoEditorServicing
+  ///   - editor: Instance of existing EditorEffectsConfigHolder
+  init(
+    editor: VideoEditorServicing,
+    effectConfigHolder: EffectsHolderServicing
+  )
+  
+  /// Allows you to add visual effects with required settings.
+  /// - Parameters:
+  ///   - type: Describes what kind of effect needs to be added
+  ///   - startTime: When effect starts
+  ///   - endTime: When effect ends
+  ///   - removeSameType: Remove same effect if exist
+  ///   - effectId: Unic effect id
+  func applyVisualEffectApplicatorType(
+    _ type: VisualEffectApplicatorType,
+    startTime: CMTime,
+    endTime: CMTime,
+    removeSameType: Bool,
+    effectId: UInt
+  )
+  
+  /// Allows you to add speed effects with required settings.
+  /// - Parameters:
+  ///   - type: Describes what kind of effect needs to be added
+  ///   - startTime: When effect starts
+  ///   - endTime: When effect ends
+  ///   - removeSameType: Remove same effect if exist
+  ///   - effectId: Unic effect id
+  func applySpeedEffectType(
+    _ type: SpeedEffectType,
+    startTime: CMTime,
+    endTime: CMTime,
+    removeSameType: Bool,
+    effectId: UInt
   )
   
   /// Allows you to add GIF or text effects with required settings.
   /// - Parameters:
   ///   - type: Describes what kind of effect needs to be added
   ///   - effectInfo: Contains all the information you need to add effects to your video.
-  public func applyEffectType(
-    _ type: EffectApplicatorType,
+  func applyOverlayEffectType(
+    _ type: OverlayEffectApplicatorType,
     effectInfo: VideoEditorEffectInfo
   )
-}
-
-/// VideoEditorEffectInfo contains all the information you need to add effects to your video.
-public struct VideoEditorEffectInfo {
-  /// Effect id
-  public private(set) var id: UInt
-  /// Effect snapshot
-  public private(set) var image: UIImage
-  /// Describes the relative screen points of the effects on the screen
-  public private(set) var relativeScreenPoints: ImagePoints
-  /// When effect starts
-  public private(set) var start: CMTime
-  /// When effect ends
-  public private(set) var end: CMTime
   
-  /// VideoEditorEffectInfo constructor
+  /// Allows you to add rotation effect with required settings.
   /// - Parameters:
-  ///   - id: Effect id
-  ///   - image: Effect snapshot
-  ///   - relativeScreenPoints: Describes the relative screen points of the effects on the screen
-  ///   - start: When effect starts
-  ///   - end: When effect ends
-  public init(
-    id: UInt,
-    image: UIImage,
-    relativeScreenPoints: ImagePoints,
-    start: CMTime,
-    end: CMTime
+  ///   - atStartTime: When effect is need to be start
+  ///   - end: When effect is need to be end
+  ///   - rotation: Video rotation settings
+  func addTransformEffect(
+    atStartTime start: CMTime,
+    end: CMTime,
+    rotation: AssetRotation
   )
 }
 ```
