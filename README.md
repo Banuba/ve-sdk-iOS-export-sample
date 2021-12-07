@@ -17,8 +17,8 @@ This is what you need to run the AI Video Editor SDK
 
 - iPhone devices 6+
 - Swift 5+
-- Xcode 12.4+
-- iOS 11.0+
+- Xcode 13+
+- iOS 12.0+
 Unfortunately, It isn't optimized for iPads.
 
 ## Supported media formats
