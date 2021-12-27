@@ -1,6 +1,12 @@
 [![](https://www.banuba.com/hubfs/Banuba_November2018/Images/Banuba%20SDK.png)](https://www.banuba.com/video-editor-sdk)
 
-# Video Editor SDK. Export Integration sample for iOS.
+# iOS Banuba AI Video Editor Export API Integration Sample
+
+This repository contains a sample of using AI Video Editor Export API in your mobile app.
+
+Export API can apply configurable effects to video and export that video with specified parameters. Export API has no UI, hence cannot display applied effects.
+
+It contains the must-have video editing features such as adding video effects, gif/text, watermark, speed effects, color effects, AR effects to the exported video with a predefined position, duration and period. It can also edit the aspect ratio.
 
 - [Requirements](#Requirements)
 - [Supported media formats](#Supported-media-formats)
@@ -24,7 +30,7 @@ Unfortunately, It isn't optimized for iPads.
 ## Supported media formats
 | Audio      | Video      |
 | ---------- | ---------  | 
-|.mp3, .aac, .wav, <br>.m4a, .flac, .aiff |.mp4, .mov, .m4v|
+| mp3, aac, wav, m4a, flac, aiff | mp4, mov, m4v |
 
 ## Export video quality params
 You could customize it with `ExportVideoInfo`. Just put a required video quality into `ExportVideoInfo` constructor. To be able to use your own quality parametrs please follow this [line](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L56).
