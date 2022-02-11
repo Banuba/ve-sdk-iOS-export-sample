@@ -9,6 +9,8 @@ import Foundation
 
 // Banuba Modules
 import VideoEditor
+//import VEExportSDK
+import BanubaUtilities
 import BanubaVideoEditorEffectsSDK
 
 // MARK: - Export Helpers
@@ -42,7 +44,11 @@ extension ViewController {
     // Expected non-zero video aspect ratio constructor. Apply transform effect after adding required asset.
     // Apply temporary original rotation.
     let originalRotation: AssetRotation = .rotate90
-    effectApplicator?.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: originalRotation)
+    effectApplicator?.addTransformEffect(
+      atStartTime: .zero,
+      end: .indefinite,
+      rotation: originalRotation
+    )
     
     // Apply gif effect after transforming and adding relevant video editor asset
     applyOverlayEffect(withType: .gif)
@@ -57,6 +63,47 @@ extension ViewController {
     
     // Get file url
     let fileURL = prepareVideoFileURL()
+    
+//    // GIF
+//    let gifSettings = GifSettings(
+//      duration: 1.5
+//    )
+//
+//    // Quality
+//    let exportVideoInfo = ExportVideoInfo(
+//      resolution: .original,
+//      useHEVCCodecIfPossible: true
+//    )
+//
+//    let quality: ExportQuality = .videoConfiguration(exportVideoInfo)
+//
+//    // Export video  configurations
+//    let exportVideoConfigurations: [ExportVideoConfiguration] = [
+//      ExportVideoConfiguration(
+//        fileURL: fileURL,
+//        quality: quality,
+//        useHEVCCodecIfPossible: true,
+//        watermarkConfiguration: nil
+//      )
+//    ]
+//
+//    // Export  configurations
+//    let exportConfiguration = ExportConfiguration(
+//      videoConfigurations: exportVideoConfigurations,
+//      isCoverEnabled: true,
+//      gifSettings: gifSettings
+//    )
+//
+//    // Export video
+//    videoEditorService.export(
+//      using: exportConfiguration
+//    ) { [weak self] (success, error, coverImage) in
+//      guard success else {
+//        print(error?.localizedDescription as Any)
+//        return
+//      }
+//      self.shareResultVideo(url: fileURL)
+//    }
     
     // Export settings
     let exportVideoInfo = ExportVideoInfo(

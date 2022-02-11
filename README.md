@@ -103,26 +103,35 @@ See the sample edit video flow [here](https://github.com/Banuba/ve-sdk-iOS-expor
 To export video after the editing is complete use these methods:
 
 ``` swift
-/// Export video with input info and watermark model
+/// Export several configurable video
   /// - Parameters:
-  ///   - fileURL: destination file url.
-  ///   - exportVideoInfo: Describes exporting video editor params.
-  ///   - watermarkFilterModel: Watermark effect.
-  ///   - completion: completion creation - (isSuccess,  error)
-  func exportVideo(
-    to fileURL: URL,
-    using exportVideoInfo: ExportVideoInfo,
-    watermarkFilterModel: VideoEditorFilterModel?,
-    completion: ((_ isSuccess: Bool, _ error: Error?)-> Void)?
+  ///   - configuration: contains configurations for exporting videos such as file url,
+  ///    watermark and video quality and etc.
+  ///   - completion: completion: (success, error, exportCoverImages), execute on background thread.
+  func export(
+    using configuration: ExportConfiguration,
+    completion: @escaping ((_ success: Bool, _ error: Error?, _ exportCoverImages: ExportCoverImages?)->Void)
   )
 ```  
 
-Before exporting you need to apply default rotate transform:
+Before exporting you need to apply export configurations:
 ``` swift
-    // Expected non-zero video aspect ratio constructor. Apply transform effect after adding required asset.
-    // Apply temporary original rotation.
-    let originalRotation: AssetRotation = .rotate90
-    effectApplicator?.addTransformEffect(atStartTime: .zero, end: .indefinite, rotation: originalRotation)
+    // Export video configurations
+    let exportVideoConfigurations: [ExportVideoConfiguration] = [
+      ExportVideoConfiguration(
+        fileURL: fileURL,
+        quality: .auto,
+        useHEVCCodecIfPossible: true,
+        watermarkConfiguration: nil
+      )
+    ]
+    
+    // Export configurations
+    let exportConfiguration = ExportConfiguration(
+      videoConfigurations: exportVideoConfigurations,
+      isCoverEnabled: true,
+      gifSettings: nil
+    )
 ```
 
 See the sample export video flow [here](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L62).
@@ -131,7 +140,7 @@ See the sample export video flow [here](https://github.com/Banuba/ve-sdk-iOS-exp
 
 You can add a branded image that would appear on videos that users export. 
 
-To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity. 
+To do so, create and configure the ```WatermarkConfiguration``` structure, then add it to the ```ExportVideoConfiguration``` entity. 
 
 See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L65) for details.
 
