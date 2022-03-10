@@ -17,6 +17,10 @@ It contains the must-have video editing features such as adding video effects, g
     + [Configure export flow](#Configure-export-flow)
     + [Configure watermark](#Configure-watermark)
     + [Configure effects](#Configure-effects)
+- [API Reference](#API-Reference)
+    + [Export API](#Export-API)
+    + [Effects API](#Effects-API)
+    + [Core API](#Core-API)
 
 ## Requirements
 This is what you need to run the AI Video Editor SDK
@@ -206,3 +210,20 @@ public class EffectApplicator {
   )
 }
 ```
+
+## API Reference
+
+Framework API's which implemented with export-sample.
+
+### Export API
+
+[API Reference](https://github.com/Banuba/VEExportSDK-iOS)
+
+### Effects API
+
+[API Reference](https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS)
+
+
+### Core API
+
+[API Reference](https://github.com/Banuba/VideoEditor-iOS)
