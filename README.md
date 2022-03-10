@@ -135,7 +135,7 @@ See the sample export video flow [here](https://github.com/Banuba/ve-sdk-iOS-exp
 
 You can add a branded image that would appear on videos that users export. 
 
-To do so, create and configure the WatermarkConfiguration structure, then add it to the ExportVideoConfiguration entity. 
+To do so, create and configure the `WatermarkConfiguration` structure, then add it to the `ExportVideoConfiguration` entity. 
 
 See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c236ea1690ea8c460b103649dc1f3bc2c65f6/ExportAPISample/ExportAPISample/ViewControllerExtensions/ExportFunctionality%20.swift#L65) for details.
 
@@ -143,7 +143,7 @@ See this [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/b63c2
 
 You can add an effect objects such as gif/text, viasual, speed, color to exporting video. 
 
-To be able to use following functionality you need to operate on EffectApplicator entity.
+To be able to use following functionality you need to operate on `EffectApplicator` entity.
 
 Please, checkout [example](https://github.com/Banuba/ve-sdk-iOS-export-sample/blob/2eb9738c23b397caaf46bd665bf436107c863f6f/ExportAPISample/ExportAPISample/Sample/EffectsApplicator.swift#L15)
 
@@ -217,18 +217,19 @@ Framework API's which implemented with export-sample.
 
 ### Export API
 
-VEExportSDK allows you to export video composition which already setuped in [Core API](https://github.com/Banuba/VideoEditor-iOS) and optionally edited with [Effects API](https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS). So [Core API](https://github.com/Banuba/VideoEditor-iOS) is requires usage for VEExportSDK.
+`VEExportSDK` allows you to export video composition which already setuped in [Core API](https://github.com/Banuba/VideoEditor-iOS) and optionally edited with [Effects API](https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS). So [Core API](https://github.com/Banuba/VideoEditor-iOS) is requires usage for `VEExportSDK`.
 
 [API Reference](https://github.com/Banuba/VEExportSDK-iOS)
 
 ### Effects API
 
-VEEffectsSDK allows you to edit video composition which already setuped in [Core API](https://github.com/Banuba/VideoEditor-iOS). So [Core API](https://github.com/Banuba/VideoEditor-iOS) is requires usage for VEEffectsSDK.
+`VEEffectsSDK` allows you to edit video composition which already setuped in [Core API](https://github.com/Banuba/VideoEditor-iOS). So [Core API](https://github.com/Banuba/VideoEditor-iOS) is requires usage for `VEEffectsSDK`.
 
 [API Reference](https://github.com/Banuba/BanubaVideoEditorEffectsSDK-iOS)
 
+
 ### Core API
 
-Video editor is a core module for interaction between playback modules, export, etc. All transformations with effects, sounds, time, trimming take place inside this module. In order to use exporting, applying effects, or getting a player, first you need to use the essence of the VideoEditorService entity and add the necessary video segments or assets to it.
+`VideoEditor` is a core module for interaction between playback modules, export, etc. All transformations with effects, sounds, time, trimming take place inside this module. In order to use exporting, applying effects, or getting a player, first you need to use the essence of the `VideoEditorService` entity and add the necessary video segments or assets to it.
 
 [API Reference](https://github.com/Banuba/VideoEditor-iOS)
