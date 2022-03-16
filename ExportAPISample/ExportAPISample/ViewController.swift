@@ -9,7 +9,7 @@ import UIKit
 
 // Banuba Modules
 import VideoEditor
-import BanubaVideoEditorEffectsSDK
+import VEEffectsSDK
 
 class ViewController: UIViewController {
   

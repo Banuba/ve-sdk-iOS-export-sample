@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // Banuba modules
-import BanubaVideoEditorEffectsSDK
+import VEEffectsSDK
 
 // MARK: - Transformation helpers
 extension ViewController {
