@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // Banuba Modules
-import BanubaVideoEditorEffectsSDK
+import VEEffectsSDK
 
 // MARK: - Gif and Text Helpers
 extension ViewController {
@@ -56,7 +56,17 @@ extension ViewController {
   /// Apply text  or gif effect
   func applyOverlayEffect(withType type: OverlayEffectApplicatorType) {
     // Ouput image should be created from cgImage reference
-    let image = type == .gif ? createGifImage() : createTextImage()
+    var image: UIImage?
+    
+    switch type {
+      case .gif:
+        image = createGifImage()
+      case .text:
+        image = createTextImage()
+     default:break
+    }
+    
+    
     guard let outputImage = image else {
       return
     }
@@ -75,7 +85,16 @@ extension ViewController {
   ) -> VideoEditorEffectInfo {
     
     // Relevant screen points
-    let points = type == .gif ? gifImagePoints : textImagePoints
+    var points: ImagePoints?
+    
+    switch type {
+      case .gif:
+        points = gifImagePoints
+      case .text:
+        points = textImagePoints
+      default: break
+    }
+    
     
     // Result effect info
     let effectInfo = VideoEditorEffectInfo(
