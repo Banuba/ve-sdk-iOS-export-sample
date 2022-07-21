@@ -24,7 +24,11 @@ extension ViewController {
     
     // Add video to the sequence
     let videoSequence = VideoSequence(folderURL: folderURL)
-    videoSequence.addVideo(at: videoFileURL, isSlideShow: false)
+    videoSequence.addVideo(
+      at: videoFileURL,
+      isSlideShow: false,
+      transition: .normal
+    )
     
     // Get video resolution configuration
     let videoResolutionConfiguration = prepareVideoResolutionConfiguration()
