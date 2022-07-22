@@ -1,0 +1,9 @@
+${PODS_ROOT}/Target Support Files/Pods-ExportAPISample/Pods-ExportAPISample-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BSImagePicker/BSImagePicker.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BNBLicenseUtils/BNBLicenseUtils.framework/BNBLicenseUtils
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BanubaLicenseServicingSDK/BanubaLicenseServicingSDK.framework/BanubaLicenseServicingSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BanubaSDKServicing/BanubaSDKServicing.framework/BanubaSDKServicing
+${PODS_XCFRAMEWORKS_BUILD_DIR}/BanubaUtilities/BanubaUtilities.framework/BanubaUtilities
+${PODS_XCFRAMEWORKS_BUILD_DIR}/VEEffectsSDK/VEEffectsSDK.framework/VEEffectsSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/VEExportSDK/VEExportSDK.framework/VEExportSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/VideoEditor/VideoEditor.framework/VideoEditor

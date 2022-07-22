@@ -77,7 +77,7 @@ extension ViewController {
     // Export video
     let exportSDK = VEExport(videoEditorService: videoEditorService)
     
-    exportSDK.exportVideo(
+    exportSDK?.exportVideo(
       to: fileURL,
       using: exportVideoInfo,
       watermarkFilterModel: nil
